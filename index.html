@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./node_modules/systemjs/dist/system.js"></script>
+    </head>
+    <div id="line">Change It With JQuery</div>
+    <body>
+        <!--<h1>ImportModule</h1>!-->
+        <script>
+            SystemJS.config({
+                map:{
+                    "MyjQuery":"node_modules/jquery/dist/jquery.min.js"
+                },
+                baseURL:'/',
+                defaultJSExtensions:true
+            });
+            SystemJS.import('jquery.js')
+        </script>
+    </body>
+</html>
